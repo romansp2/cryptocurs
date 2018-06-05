@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mts: 1
+  open: 9.99
+  close: 9.99
+  high: 9.99
+  low: 9.99
+  volume: 9.99
+
+two:
+  mts: 1
+  open: 9.99
+  close: 9.99
+  high: 9.99
+  low: 9.99
+  volume: 9.99

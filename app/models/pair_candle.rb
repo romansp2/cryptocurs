@@ -1,0 +1,3 @@
+class PairCandle < ApplicationRecord
+
+end
