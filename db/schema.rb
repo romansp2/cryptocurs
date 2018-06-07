@@ -21,28 +21,31 @@ ActiveRecord::Schema.define(version: 20180605170323) do
   end
 
   create_table "pair_candles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.integer "mts"
+    t.string "code"
+    t.bigint "mts"
     t.decimal "open", precision: 10
     t.decimal "close", precision: 10
     t.decimal "high", precision: 10
     t.decimal "low", precision: 10
     t.decimal "volume", precision: 10
-    t.integer "currency_id"
+    t.integer "pair_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "pairs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.decimal "bid", precision: 10
-    t.decimal "bid_size", precision: 10
-    t.decimal "ask", precision: 10
-    t.decimal "ask_size", precision: 10
-    t.decimal "daily_change", precision: 10
-    t.decimal "daily_change_perc", precision: 10
-    t.decimal "last_price", precision: 10
-    t.decimal "volume", precision: 10
-    t.decimal "high", precision: 10
-    t.decimal "low", precision: 10
+    t.string "code"
+    t.float "bid", limit: 24
+    t.float "bid_size", limit: 24
+    t.float "ask", limit: 24
+    t.float "ask_size", limit: 24
+    t.float "daily_change", limit: 24
+    t.float "daily_change_perc", limit: 24
+    t.float "last_price", limit: 24
+    t.float "volume", limit: 24
+    t.float "high", limit: 24
+    t.float "low", limit: 24
+    t.integer "currency_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

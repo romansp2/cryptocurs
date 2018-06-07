@@ -8,22 +8,16 @@
     <div class="raw">
       <h4>Криптовалюты</h4>
       <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-      </div>
-
+        <% @currencies.each do |currency| %>
+        <button class="tablinks" onclick="openCity(event, '<%= currency.code %>')"><%= currency.code.upcase %></button>
+        <% end %>
+          </div>
       <!-- Tab content -->
-      <div id="London" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
+      <% @currencies.each do |currency| %>
+      <div id=<%= currency.code %> class="tabcontent">
+        <%= render :partial => 'currency_table', :locals => {:currency => currency} %>
       </div>
-
-      <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
-      </div>
-
-      <h3><%= @response %></h3>
+          <% end %>
     </div>
 
   </div>

@@ -1,0 +1,51 @@
+<div class="main">
+  <div class="container">
+    <h2 style="margin-top: -15px; opacity: 0.8">CryptoCurs</h2>
+    <div class="header">
+      <h2><%= @pair.code %></h2>
+    </div>
+    <div class="raw">
+    <div id="MainInfo">
+      <div class="InfoBlock">
+        <h4 class="InfoLabel">Цена на данный момент:</h4>
+        <h2 class="InfoData"><%= @pair.bid %></h2>
+      </div>
+      <div class="Info">
+        <div class="split left">
+          <p>Наивысшая цена 24ч </p>
+          <h4 class="InfoData"><%= @pair.high %></h4>
+        </div>
+        <div class="split middle">
+          <p>Изменение за 24ч </p>
+          <h4 class="InfoData"><%= @pair.daily_change_perc%>%</h4>
+        </div>
+        <div class="split right">
+          <p>Наинизшая цена 24ч </p>
+          <h4 class="InfoData"><%= @pair.low %></h4>
+        </div>
+        <div>
+          <p>Ежедневный объем </p>
+          <h4 class="InfoData"><%= @pair.volume %></h4>
+        </div>
+        <div class="split middle">
+          <p>Размер последнего наинизшего запроса</p>
+          <h4 class="InfoData"><%= @pair.ask_size %></h4>
+        </div>
+        <div class="split right">
+          <p>Цена последнего наинизшего запроса </p>
+          <h4 class="InfoData"><%= @pair.ask %></h4>
+        </div>
+        <div class="split left">
+          <p>Размер последней наивысшей ставки</p>
+          <h4 class="InfoData"><%= @pair.bid_size %></h4>
+        </div>
+      </div>
+      <div class="HistoryButton">
+        <%= link_to "Показать историю Валютной Пары", pair_pair_candles_path(@pair)%>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>

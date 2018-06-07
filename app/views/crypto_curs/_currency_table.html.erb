@@ -1,0 +1,25 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Валютная пара</th>
+    <th>Последняя цена</th>
+    <th>24ч НИЗ</th>
+    <th>24 изменения</th>
+    <th>24ч ВЕРХ</th>
+    <th>Общая цена</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% currency.pairs.each do |pair| %>
+  <tr>
+    <td> <%= link_to pair.code.upcase, pair %></td>
+    <td><%= pair.bid %></td>
+    <td><%= pair.low %></td>
+    <td><%= pair.daily_change_perc %>%</td>
+    <td><%= pair.high %></td>
+    <td><%= pair.volume %> <%= currency.code.upcase %></td>
+
+  </tr>
+  <% end %>
+  </tbody>
+</table>

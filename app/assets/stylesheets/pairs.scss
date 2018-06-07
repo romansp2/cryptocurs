@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+.main{
+  width: 100vw;
+  height: 100vh;
+  background-color: #F7F7F7;
+}
+
+.container{
+  width: 80vw;
+  height: 100vh;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color: #000000;
+}
+
+.header{
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 25vh;
+  top: 8vh;
+  left: 0;
+  background-image: url("trade.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Amatic SC', cursive;
+  color: #fffbf9;
+  font-size: 40px;
+}
+.header h4{
+  margin-top: -40px;
+  font-family: 'Poiret One', cursive;
+  color: #fffbf9;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.raw {
+  display: block;
+  position: absolute;
+  top: 33vh;
+  width: inherit;
+  height: 100%;
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+}
+#MainInfo{
+  width: inherit;
+}
+
+.InfoData{
+  margin-top: -20px;
+}
+.Info{
+  width: inherit;
+  display: inline-block;
+}
+.split{
+  display: inline-block;
+  margin: 0 100px;
+}
